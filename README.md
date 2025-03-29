@@ -29,3 +29,5 @@ def letter_combination(n: int) -> List[str]:
     dfs(0, []) #the start_idx always starts at 0
     return res
 
+Another Template for Backtracking:
+<img width="682" alt="image" src="https://github.com/user-attachments/assets/0d819dc1-2cdd-420b-a44f-d7feab5f1d27" />
