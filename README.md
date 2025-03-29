@@ -21,9 +21,9 @@ def letter_combination(n: int) -> List[str]:
             return
         
         for letter in "ab": # here ab is each edge
-            if valid: 
-                path.append(letter)
-                print("path", path)
+            #if valid: 
+            path.append(letter)
+            print("path", path)
             dfs(start_index + 1, path)
             path.pop()
 
