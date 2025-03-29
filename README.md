@@ -6,6 +6,9 @@
 
 Example to solve Combinatorial Search Problem:Given a non-negative integer n, find all n-letter words composed by 'a' and 'b', return them in a list of strings in lexicographical order.
 
+
+
+
 from typing import List
 
 def letter_combination(n: int) -> List[str]:
