@@ -24,8 +24,8 @@ def letter_combination(n: int) -> List[str]:
             if valid: 
                 path.append(letter)
                 print("path", path)
-                dfs(start_index + 1, path)
-                path.pop()
+            dfs(start_index + 1, path)
+            path.pop()
 
     dfs(0, []) #the start_idx always starts at 0
     return res
