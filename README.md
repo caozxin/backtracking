@@ -33,4 +33,4 @@ def letter_combination(n: int) -> List[str]:
 Another Template for Backtracking:
 <img width="682" alt="image" src="https://github.com/user-attachments/assets/0d819dc1-2cdd-420b-a44f-d7feab5f1d27" />
 
-<img width="660" alt="image" src="https://github.com/user-attachments/assets/f46523dd-2142-429d-8e1c-e596cc02792f" />
+<img width="682" alt="image" src="https://github.com/user-attachments/assets/f46523dd-2142-429d-8e1c-e596cc02792f" />
