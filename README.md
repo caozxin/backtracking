@@ -37,17 +37,25 @@ Another Template for Backtracking:
 
 <img width="655" alt="image" src="https://github.com/user-attachments/assets/fe7968cd-af01-45ee-aabf-dca6afc5ee20" />
 
-Here we introduce an updated template.
+  # Backtracking with Pruning Template:
 
-function dfs(start_index, path):
-if is_leaf(start_index):
-   report(path)
-   return
-for edge in get_edges(start_index):
-  # prune if needed
-  if not is_valid(edge):
-    continue
-  path.add(edge)
-  # increment start_index
-  dfs(start_index + len(edge), path)
-  path.pop()
+
+
+    function dfs(start_index, path):
+    if is_leaf(start_index):
+       report(path)
+       return
+    for edge in get_edges(start_index):
+      # prune if needed
+      if not is_valid(edge):
+        continue
+      path.add(edge)
+      # increment start_index
+      dfs(start_index + len(edge), path)
+      path.pop()
+
+    dfs(0, []) #the start_idx always starts at 0
+    return res
+
+
+  
