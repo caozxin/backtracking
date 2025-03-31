@@ -9,26 +9,26 @@ Example to solve Combinatorial Search Problem:Given a non-negative integer n, fi
   # Implement Backtracking: Draw the tree, draw the tree, draw the tree!!!
 
 
-from typing import List
-
-def letter_combination(n: int) -> List[str]:
-    res: List[str] = []
-
-    def dfs(start_index: int, path: List[str]) -> None:
-        if start_index == n:
-            res.append("".join(path))#only append all edges when it reachs leaf node
-            print("res", res)
-            return
-        
-        for letter in "ab": # here ab is each edge
-            #if valid: 
-            path.append(letter)
-            print("path", path)
-            dfs(start_index + 1, path)
-            path.pop()
-
-    dfs(0, []) #the start_idx always starts at 0
-    return res
+    from typing import List
+    
+    def letter_combination(n: int) -> List[str]:
+        res: List[str] = []
+    
+        def dfs(start_index: int, path: List[str]) -> None:
+            if start_index == n:
+                res.append("".join(path))#only append all edges when it reachs leaf node
+                print("res", res)
+                return
+            
+            for letter in "ab": # here ab is each edge
+                #if valid: 
+                path.append(letter)
+                print("path", path)
+                dfs(start_index + 1, path)
+                path.pop()
+    
+        dfs(0, []) #the start_idx always starts at 0
+        return res
 
 Another Template for Backtracking:
 <img width="682" alt="image" src="https://github.com/user-attachments/assets/0d819dc1-2cdd-420b-a44f-d7feab5f1d27" />
