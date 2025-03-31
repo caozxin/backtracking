@@ -34,3 +34,20 @@ Another Template for Backtracking:
 <img width="682" alt="image" src="https://github.com/user-attachments/assets/0d819dc1-2cdd-420b-a44f-d7feab5f1d27" />
 
 <img width="682" alt="image" src="https://github.com/user-attachments/assets/f46523dd-2142-429d-8e1c-e596cc02792f" />
+
+<img width="655" alt="image" src="https://github.com/user-attachments/assets/fe7968cd-af01-45ee-aabf-dca6afc5ee20" />
+
+Here we introduce an updated template.
+
+function dfs(start_index, path):
+if is_leaf(start_index):
+   report(path)
+   return
+for edge in get_edges(start_index):
+  # prune if needed
+  if not is_valid(edge):
+    continue
+  path.add(edge)
+  # increment start_index
+  dfs(start_index + len(edge), path)
+  path.pop()
