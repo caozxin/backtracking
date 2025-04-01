@@ -57,5 +57,7 @@ Another Template for Backtracking:
     dfs(0, []) #the start_idx always starts at 0
     return res
 
+# state-space tree in Palindrome Partitioning example:
+<img width="637" alt="image" src="https://github.com/user-attachments/assets/f9eaf11b-f964-4ee2-bf93-769faab9ee00" />
 
   
