@@ -60,4 +60,5 @@ Another Template for Backtracking:
 # state-space tree in Palindrome Partitioning example:
 <img width="637" alt="image" src="https://github.com/user-attachments/assets/f9eaf11b-f964-4ee2-bf93-769faab9ee00" />
 
-  
+  <img width="641" alt="image" src="https://github.com/user-attachments/assets/ea7b5a76-c639-4bf8-b958-9569b03a00b8" />
+
