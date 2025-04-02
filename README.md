@@ -62,3 +62,18 @@ Another Template for Backtracking:
 
   <img width="641" alt="image" src="https://github.com/user-attachments/assets/ea7b5a76-c639-4bf8-b958-9569b03a00b8" />
 
+    ans = []
+    def dfs(start_index, path, [...additional states]):
+        if is_leaf(start_index):
+            ans.append(path[:]) # add a copy of the path to the result
+            return
+        for edge in get_edges(start_index, [...additional states]):
+            # prune if needed
+            if not is_valid(edge):
+                continue
+            path.add(edge)
+            if additional states:
+                update(...additional states)
+            dfs(start_index + len(edge), path, [...additional states])
+            # revert(...additional states) if necessary e.g. permutations
+            path.pop()
