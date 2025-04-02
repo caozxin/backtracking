@@ -3,7 +3,12 @@ class Solution:
         n = len(s)
         def if_palindrome(word):
             return word == word[::-1]
-
+        # [::-1] is Python's slicing notation:
+            # word[start:end:step]
+            # [::-1] means:
+            # Start from the end (-1 step).
+            # Move backward to the beginning.
+            # Effectively reverses the string.
         def dfs_backtrack(start, path):
             # print("  dfs")
             if start == n: # if the substring has the len of input string, then it reachs the leaf.
