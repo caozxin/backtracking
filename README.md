@@ -81,7 +81,7 @@ Another Template for Backtracking:
             path.pop() # revert(...additional states) if necessary e.g. permutations
             
   # Backtracking with Aggregation Template: 
-  -->We need to aggregate the return value from child recursive calls to parent and bubble them up. 
+  -->Basically We use backtracking to aggregate the return value from child recursive calls to parent and bubble them up. 
 
       function def dfs(start_index, [...additional states]):
       if is_leaf(start_index):
@@ -97,5 +97,9 @@ Another Template for Backtracking:
 
 
       
+<img width="559" alt="image" src="https://github.com/user-attachments/assets/a2c0ed83-9ab9-4b66-b54a-6ea9d17e8b74" />
+<img width="642" alt="image" src="https://github.com/user-attachments/assets/de1b381e-1533-4af8-9fa0-50bc5c4a85e0" />
+
   
+
   
