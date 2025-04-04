@@ -1,3 +1,5 @@
+### the 1st backtracking problem I solved by myself!!!
+### my version: 
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         if not nums:
@@ -8,21 +10,22 @@ class Solution:
         def dfs_backtrack(start_idx, path):
             if start_idx == n:
                 res.append(path) # note: path here is a list. 
-                print("res", res)
+                # print("res", res)
                 return # backtracking always return blank. 
             # get_edges = nums
 
-            for edge in nums[start_idx:]:
+            for edge in nums:
                 #if pruning is needed:
-                # if edge == path.
+                if edge in path:
+                    continue
                 # if not is_valid(edge):
                 #     continue
-                print(edge, path)
+                # print(edge, path)
                 path.append(edge)
-                print("reset", nums[start_idx:])
+                # print("reset", nums[start_idx:])
                 # exit()
                 dfs_backtrack(start_idx + 1, path[:]) #len(edge)
-                print(path)
+                # print(path)
                 path.pop()
                 
                 # exit()
