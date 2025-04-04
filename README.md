@@ -79,3 +79,23 @@ Another Template for Backtracking:
             dfs(start_index + len(edge), path, [...additional states])
             
             path.pop() # revert(...additional states) if necessary e.g. permutations
+            
+  # Backtracking with Aggregation Template: 
+  -->We need to aggregate the return value from child recursive calls to parent and bubble them up. 
+
+      function def dfs(start_index, [...additional states]):
+      if is_leaf(start_index):
+          return 1
+      ans = initial_value
+      for edge in get_edges(start_index, [...additional states]):
+          if additional states: 
+              update([...additional states])
+          ans = aggregate(ans, dfs(start_index + len(edge), [...additional states]))
+          if additional states: 
+              revert([...additional states])
+      return ans
+
+
+      
+  
+  
