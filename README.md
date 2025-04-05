@@ -80,7 +80,7 @@ Another Template for Backtracking:
             
             path.pop() # revert(...additional states) if necessary e.g. permutations
             
-  # Backtracking with Aggregation Template: 
+  # Backtracking with Aggregation & Memoization Template: 
   -->Basically We use backtracking to aggregate the return value from child recursive calls to parent and bubble them up. 
 
       function def dfs(start_index, [...additional states]):
