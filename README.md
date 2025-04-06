@@ -100,6 +100,11 @@ Another Template for Backtracking:
 <img width="559" alt="image" src="https://github.com/user-attachments/assets/a2c0ed83-9ab9-4b66-b54a-6ea9d17e8b74" />
 <img width="642" alt="image" src="https://github.com/user-attachments/assets/de1b381e-1533-4af8-9fa0-50bc5c4a85e0" />
 
+  # Memoization, Backtracking, & Dynamic Programming: 
+  <img width="892" alt="image" src="https://github.com/user-attachments/assets/bb443e53-e0ce-4533-bbce-9523071eb193" />
+
+  <img width="857" alt="image" src="https://github.com/user-attachments/assets/787b8543-2d20-4bcd-88dd-8a0b7c519cdf" />
   
+  <img width="867" alt="image" src="https://github.com/user-attachments/assets/4dbf3b85-072d-4c3e-b074-40bde8f566a1" />
 
   
