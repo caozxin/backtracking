@@ -106,5 +106,21 @@ Another Template for Backtracking:
   <img width="857" alt="image" src="https://github.com/user-attachments/assets/787b8543-2d20-4bcd-88dd-8a0b7c519cdf" />
   
   <img width="867" alt="image" src="https://github.com/user-attachments/assets/4dbf3b85-072d-4c3e-b074-40bde8f566a1" />
-
   
+  # Memoization Example with Fibonacci Sequence: 
+  <img width="826" alt="image" src="https://github.com/user-attachments/assets/3cf38b3e-7664-4fdf-a83b-8ac6442116e7" />
+
+      # A memoized solution
+      def fib_2(n, memo):
+          if memo[n] is not None:
+              return memo[n]
+          if n == 1 or n == 2:
+              result = 1
+          else:
+              result = fib_2(n-1, memo) + fib_2(n-2, memo)
+          memo[n] = result
+          return result
+      
+      def fib_memo(n):
+          memo = [None] * (n + 1)
+          return fib_2(n, memo)
