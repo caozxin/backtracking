@@ -37,7 +37,7 @@ Another Template for Backtracking:
 
 <img width="655" alt="image" src="https://github.com/user-attachments/assets/fe7968cd-af01-45ee-aabf-dca6afc5ee20" />
 
-  # Backtracking with Pruning Template:
+  # *Backtracking with Pruning Template:
 
 
 
