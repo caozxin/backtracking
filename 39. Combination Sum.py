@@ -24,14 +24,14 @@ class Solution:
                 path.sort()
                 if path not in res:
                     res.append(path[:]) # you need to add a deep copy
-                    print("res", res)
+                    # print("res", res)
                 return 
 
             if curr_sum > target:
                 return 
 
-            if curr_sum in memo:
-                return memo[curr_sum]
+            # if curr_sum in memo:
+            #     return memo[curr_sum]
 
             # curr_sum = 0
 
@@ -46,7 +46,7 @@ class Solution:
                 path.append(candidates[i] )
                 # curr_sum += candidates[i] 
                 curr_sum = sum(path[:])
-                print("path, curr_sum", path, curr_sum)
+                # print("path, curr_sum", path, curr_sum)
                 dfs_backtrack(i+1, curr_sum, path[:])
                     # curr_sum += edge
 
