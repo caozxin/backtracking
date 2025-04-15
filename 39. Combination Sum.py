@@ -1,3 +1,4 @@
+### my not working version:
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         
@@ -54,6 +55,34 @@ class Solution:
             
             memo[curr_sum] = curr_sum
             return curr_sum
+
+### improved working version:
+from typing import List
+
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        if not candidates:
+            return []
+
+        candidates.sort()
+        res = []
+
+        def dfs(idx: int, curr_sum: int, path: List[int]):
+            if curr_sum == target:
+                res.append(path[:])
+                return
+            if curr_sum > target:
+                return
+
+            for i in range(idx, len(candidates)):
+                # You can reuse the same number, hence dfs(i, ...)
+                path.append(candidates[i])
+                dfs(i, curr_sum + candidates[i], path)
+                path.pop()
+
+        dfs(0, 0, [])
+        return res
+
 
         dfs_backtrack(0, 0, [])
         print("res", res)
