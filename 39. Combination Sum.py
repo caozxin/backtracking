@@ -90,7 +90,7 @@ class Solution:
             if curr_sum > target:
                 return 
 
-            for i in range(idx, n):
+            for i in range(idx, n): #--> We dedup in the for loop by only using candidate numbers whose index in the array is >= last used number's index.
                 #add pruning if applicable:
                 if candidates[i] > target:
                     continue
