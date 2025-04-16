@@ -55,7 +55,10 @@ class Solution:
             
             memo[curr_sum] = curr_sum
             return curr_sum
-
+        dfs_backtrack(0, 0, [])
+        print("res", res)
+        return res
+        
 ### improved working version:
 from typing import List
 
@@ -84,6 +87,4 @@ class Solution:
         return res
 
 
-        dfs_backtrack(0, 0, [])
-        print("res", res)
-        return res
+
