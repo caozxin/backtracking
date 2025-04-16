@@ -69,4 +69,37 @@ class Solution:
         return res
 
 
+### best working version similar to my previous version:
+class Solution:
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        
+        if not candidates:
+            return []
 
+        candidates.sort(reverse=True)
+        n = len(candidates)
+
+        res = []
+
+        def dfs_backtrack(idx, curr_sum: int, path: List[int]):
+
+            if curr_sum ==  target:
+                res.append(path[:])
+                return 
+
+            if curr_sum > target:
+                return 
+
+            for i in range(idx, n):
+                #add pruning if applicable:
+                if candidates[i] > target:
+                    continue
+
+                path.append(candidates[i] )
+                dfs_backtrack(i, curr_sum + candidates[i], path)
+                path.pop()
+
+            return 
+
+        dfs_backtrack(0, 0, [])
+        return res
