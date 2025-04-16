@@ -1,4 +1,4 @@
-### my not working version:
+### my slow but working version:
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         
@@ -12,29 +12,16 @@ class Solution:
         memo = {}
         res = []
 
-        # a_lst = [3, 2, 2]
-        # b_lst = [2, 2, 3]
-
-        # if a_lst == b_lst:
-        #     print("true")
-        # exit()
-
         def dfs_backtrack(idx, curr_sum: int, path: List[int]):
 
             if curr_sum ==  target:
                 path.sort()
                 if path not in res:
                     res.append(path[:]) # you need to add a deep copy
-                    # print("res", res)
                 return 
 
             if curr_sum > target:
                 return 
-
-            # if curr_sum in memo:
-            #     return memo[curr_sum]
-
-            # curr_sum = 0
 
             for i in range(n):
                 #add pruning if applicable:
@@ -43,20 +30,16 @@ class Solution:
 
                 if candidates[i] > target:
                     continue
-                # edge = candidates[i] 
-                path.append(candidates[i] )
-                # curr_sum += candidates[i] 
-                curr_sum = sum(path[:])
-                # print("path, curr_sum", path, curr_sum)
-                dfs_backtrack(i+1, curr_sum, path[:])
-                    # curr_sum += edge
 
+                path.append(candidates[i] )
+                curr_sum = sum(path[:])
+                dfs_backtrack(i+1, curr_sum, path[:])
                 path.pop()
             
             memo[curr_sum] = curr_sum
             return curr_sum
+
         dfs_backtrack(0, 0, [])
-        print("res", res)
         return res
         
 ### improved working version:
