@@ -6,7 +6,6 @@ class Solution:
             return []
 
         candidates.sort(reverse=True)
-        print(candidates)
         n = len(candidates)
 
         memo = {}
