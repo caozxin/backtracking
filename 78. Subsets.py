@@ -40,3 +40,33 @@ class Solution:
         dfs_backtrack(0, [], res)
         print(res, len(res))
         return res
+
+### best working version:
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+
+        # nums.sort()
+        #none handling:
+        if not nums:
+            return [] # this should match with expected return format. 
+        res = []
+        n = len(nums)
+        
+        def dfs_backtrack(start_idx, path, res):
+
+            res.append(path[:])
+
+            if start_idx == n: # this is if_leaf, but not where we want to update res[]
+                return
+
+            for num_idx in range(start_idx, len(nums)):
+                edge = nums[num_idx]
+                if edge in path:
+                    continue
+                path.append(edge)
+                dfs_backtrack(num_idx + 1, path, res)
+                path.pop()
+
+        dfs_backtrack(0, [], res)
+        # print(res, len(res))
+        return res
